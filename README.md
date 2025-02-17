@@ -5,7 +5,7 @@ Simulations and analysis of Linear Integrated Circuits using LTSpice. Contains s
 Question : For the given circuits with power P=50μW, do DC, transient, and AC analysis. Also, check what happens when the width of each MOSFET is increased or decreased.
 
 
-Theory
+# Theory
 
 A Common Source (CS) amplifier is a basic transistor amplifier where the input is applied to the gate and the output is taken from the drain of a MOSFET. It provides high voltage gain and inverts the output signal. The amplifier works by controlling the drain current based on the gate-to-source voltage, which amplifies the input signal. The CS amplifier has high input impedance and moderate to high output impedance, making it useful in amplifying small signals in various electronic applications.
 
@@ -15,7 +15,7 @@ A Common Source (CS) amplifier is a basic transistor amplifier where the input i
    ![Screenshot 2025-02-17 210653](https://github.com/user-attachments/assets/739b8958-7ec7-4a87-9e13-cdb6594f7ed5)
 
 
-Components Details
+# Components Details
 
 The circuit features a TSMC 180nm NMOS transistor (CMOSN), along with a drain resistor and two voltage sources. The drain resistor regulates the current flow through the transistor, influencing the small signal gain. The NMOS transistor operates in the saturation region, making it ideal for amplification.
 Model : CMOSN
@@ -29,7 +29,7 @@ Signal Generator :
        Amplitude : 50mV
        Frequency : 1kHz
 
-Procedure :
+# Procedure :
 
 1. Assemble the circuit connections.
 2. Connect a 1k ohm drain resistor(RD) to the MOSFET's gate, while keeping the source terminal grounded.
@@ -107,7 +107,7 @@ AC Analysis:
 
 ![screenshot Image 2025-02-17 at 9 34 55 PM (2)](https://github.com/user-attachments/assets/76d55a42-7fe8-4ad4-bcd6-957128df144f)
 
-Calculation
+# Calculation
 
 Given power = 50 µW and VDD = 1.8 V,
 
@@ -153,14 +153,14 @@ Overall, the design worked as expected, matching the theory and proving that it�
 ![Screenshot 2025-02-17 225356](https://github.com/user-attachments/assets/f07fcf2f-7c9e-4d64-916c-8bbb05f61795)
 
 
-Aim : To determine the DC operating point and calculate the gain using transient and AC analysis.
+# Aim : To determine the DC operating point and calculate the gain using transient and AC analysis.
 
-Components Details
+# Components Details
 
 MOSFETs, M1 - NMOS and M2 - PMOS
 DC Power Supply
 
-Procedure :
+# Procedure :
 
 1. Make the circuit connections.
 2. Use a CMOSN MOSFET in the design.
@@ -208,7 +208,7 @@ Transient Analysis
    ![Screenshot Image 2025-02-17 at 11 13 45 PM](https://github.com/user-attachments/assets/733c5175-22b1-43e8-8ee3-5785c3434b2e)
    
 
-Calculation
+# Calculation
 
 To find V2:
 |VG-VS|>|Vt|
