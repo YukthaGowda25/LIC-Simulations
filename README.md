@@ -36,6 +36,8 @@ Procedure :
 9. Perform DC analysis, and transient analysis, and AC analysis again by applying a sine wave to the gate voltage source.
 
  DC ANALYSIS:
+   DC analysis examines how a circuit behaves with direct current (constant voltage) applied. It helps determine values like current and voltage in a steady-state 
+   condition, where everything is stable and not changing over time.
 
    Procedure for Performing DC Analysis:
    Select the dc output print(DC op pnt) in the Edit Simulation Command and Run the Simulation
@@ -49,6 +51,8 @@ Procedure :
    
 
 Transient Analysis:
+   Transient analysis shows how a circuit responds over time to changes, like when a signal is applied or turned off. It helps us understand how voltages and currents 
+   change before the circuit stabilizes.
 
    Procedure for Performing Transient Analysis:
    Select the Transient Analysis in the Edit Simulation Command,  Give the stop time as 1ms and Run the Simulation.
@@ -59,19 +63,55 @@ Transient Analysis:
    The Graph below shows the Transient Response of the Given Design;
 
   ![Screenshot 2025-02-17 202758](https://github.com/user-attachments/assets/2d77caa8-055d-4bcc-81dd-33d71e7e7027)
-
+  
+  V2 is a sine wave that starts at 0.9V, has a peak-to-peak variation of 50mV, and oscillates at a frequency of 1kHz.
 
    
 AC Analysis:
+   AC analysis looks at how a circuit behaves when alternating current (AC) signals are applied. It helps measure how the circuit responds to different frequencies, 
+   including changes in voltage, current, gain, and phase shift.
+
+   Procedure for Performing Transient Analysis:
+   ![Screenshot 2025-02-17 212924](https://github.com/user-attachments/assets/0e4fcf35-33c9-46e3-9bfb-0ea262e28149)
+
    
    The Graph below shows the AC Analysis of the Given Design;
 
   ![Screenshot 2025-02-17 203009](https://github.com/user-attachments/assets/3b349fed-caf5-4501-ac04-74dd0fa163b7)
 
+When Power = 50μW 
+
+DC Analysis
+![Screenshot 2025-02-17 213831](https://github.com/user-attachments/assets/f9d5a7ee-fb03-41d6-b9f3-9f9961fbedee)
+
+![Screenshot 2025-02-17 213818](https://github.com/user-attachments/assets/2518f107-6281-4bf3-b86a-8df5693386ad)
+
+Transient Analysis
+![Screenshot Image 2025-02-17 at 9 34 55 PM](https://github.com/user-attachments/assets/faa597a4-9595-4096-a157-dcb68d40292f)
+
+AC Analysis
+![Screenshot 2025-02-17 212924](https://github.com/user-attachments/assets/be0b7a6b-3e73-465c-8f35-1c77d8bab210)
+
+
+![screenshot Image 2025-02-17 at 9 34 55 PM (2)](https://github.com/user-attachments/assets/76d55a42-7fe8-4ad4-bcd6-957128df144f)
+
+Calculation 
+Given power = 50 µW and VDD = 1.8 V,
+
+Using the formula for power:
+Power = Voltage × Current
+
+We can rearrange to find the drain current (Id):
+P = VDD x Id
+Id = P/VDD
+Substituting the values,
+Id = 50μW/1.8V
+Id = 2.77 × 10^-5 A
+
 # RESULT( Design-1):
  1) DC Analysis:
-     -The calculated drain current (Id) matches the expected value based on power and voltage, with Id = 1.52735×10^-4A.
-     -By adjusting the MOSFET’s channel dimensions, where lenght is 180nm and width is 1μm and the required current was successfully achieved.
+     -The calculated drain current (Id) matches the expected value based on power and voltage, with Id = 1.52735×10^-4A
+     -By adjusting the MOSFET’s channel dimensions, where length is 180nm and width is 1μm and the required current was successfully achieved.
      -The circuit performs as expected under DC conditions.
     
  2) Transient Analysis:
@@ -81,7 +121,7 @@ AC Analysis:
 
  3) AC Analysis:
      -The AC response graph verifies that the circuit remains stable at different frequencies.
-     -The gain (4.8 dB) and phase shift (nearly 180°) match theoretical expectations.
+     -The gain (4.8 dB) when power = 50μW and phase shift (nearly 180°) match theoretical expectations 
      -The circuit maintains consistent performance across the tested frequency range.
 
 # INFERENCE( Design-1):
