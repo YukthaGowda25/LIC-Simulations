@@ -1,6 +1,3 @@
-# LIC-Simulations
-Simulations and analysis of Linear Integrated Circuits using LTSpice. Contains schematics, waveform analysis, and circuit design experiments.
-
 # Experiment-1
 Question : For the given circuits with power P=50μW, do DC, transient, and AC analysis. Also, check what happens when the width of each MOSFET is increased or decreased.
 
